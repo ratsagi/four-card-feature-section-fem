@@ -1,0 +1,132 @@
+
+:root{
+    /* Primary colors */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    /* Neutral colors */
+    --grey-500: hsl(234, 12%, 34%);
+    --grey-400: hsl(212, 6%, 44%);
+    --white: hsl(0, 0%, 100%);
+    /* Typography */
+    --fs:1rem;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+body{
+    font-family: "Poppins", serif;
+    font-size: var(--fs);
+    background-color: var(--grey-400);
+}
+
+
+.head{
+  grid-column: 1/-1;
+    text-align: center;
+    /* max-width: 500px; */
+   
+}
+h2{
+  letter-spacing: 1.5px;
+}
+h2:first-child{
+  /* color: var(--grey-500); */
+  font-weight: 200;
+  
+}
+.container{
+ display: grid;
+ grid-template-columns: 1fr;
+ place-items: center;
+ gap: 20px;
+}
+.card{
+  /* position: relative; */
+    display: grid;
+    max-width: 25em;
+    background-color: var(--white);
+    padding: 2.18rem;
+    
+    
+}
+.card-image{
+  place-self: end;
+}
+@media(min-width:750px){
+  .container{
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    place-content: center;
+    min-height: 100vh;
+    gap: 20px;
+   }
+ p{
+  max-width: 550px;
+ } 
+ .teambuilder{
+  grid-column: 2/3;
+  grid-row: 2/3;
+ }
+ .karma{
+  grid-column: 2/3;
+  grid-row: 3/4;
+ }
+ .calculator{
+grid-column: 1/2;
+grid-row: 2/4;
+place-self: center;
+ }
+ .supervisor{
+  grid-column: 3/4;
+  grid-row: 2/4;
+  place-self: center;
+ }
+}
