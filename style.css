@@ -1,0 +1,157 @@
+:root{
+    /* Colors */
+
+     /* Primary */
+    
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    
+     /* Neutral */
+    
+    --grey-500: hsl(234, 12%, 34%);
+    --grey-400: hsl(212, 6%, 44%);
+    --white: hsl(0, 0%, 100%);
+
+     /* Typography */
+     --fs:0.937rem;
+}
+
+
+/* CSS reset starts */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+/* CSS reset ends */
+
+body{
+    background-color: var(--grey-400);
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-inline: 12px;
+
+}
+h2{
+  font-weight: 600;
+}
+.title{
+    font-weight: 200;
+    margin-top: 3.75rem;
+}
+.description{
+  text-align: center;
+  
+}
+
+.cards{
+    --gap:1.875rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+    margin-top: 3.75rem;
+
+}
+.card{
+    display: grid;
+    grid-template-columns: subgrid;
+    border-radius: 5%;
+    background-color: var(--white);
+    padding: var(--gap);
+}
+.card__ilustration{
+    justify-self:end ;
+}
+.card--cyan{
+    border-top: 10px solid var(--cyan);
+}
+.card--red{
+    border-top: 10px solid var(--red);
+}
+.card--orange{
+    border-top: 10px solid var(--orange);
+}
+.card--blue{
+    border-top: 10px solid var(--blue);
+}
+@media(min-width:32em){
+    .description{
+        max-width: 34rem;
+    }
+    .cards{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    section[aria-label="supervisor"]{
+       grid-column: 1/2;
+       grid-row: 2/4;
+    
+    }
+    section[aria-label="teamBuilder"]{
+        grid-column: 2/3;
+        grid-row: 1/3;
+     }
+     section[aria-label="calculator"]{
+        grid-column: 3/4;
+        grid-row: 2/4;
+     }
+     section[aria-label="karma"]{
+        grid-column: 2/3;
+        grid-row: 3/5;
+     }
+ 
+    }
+    
