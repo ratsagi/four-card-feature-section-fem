@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 /* CSS reset ends */
 
 body{
-    background-color: var(--grey-400);
+    /* background-color: var(--grey-400); */
     font-family: "Poppins", serif;
     font-weight: 400;
     
@@ -102,13 +102,14 @@ h2{
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap);
-    margin-top: 3.75rem;
+    margin: 3.75rem;
 
 }
 .card{
     display: grid;
     grid-template-columns: subgrid;
     border-radius: 5%;
+    box-shadow: 2px 10px 3px var(--grey-500);
     background-color: var(--white);
     padding: var(--gap);
 }
